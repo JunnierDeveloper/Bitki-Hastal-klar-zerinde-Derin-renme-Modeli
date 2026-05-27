@@ -22,21 +22,21 @@ def build_model(num_classes):
     ])
     return model, base_model
 
-def plot_history(h_transfer, h_fine):
-    acc = h_transfer.history['accuracy'] + h_fine.history['accuracy']
-    val_acc = h_transfer.history['val_accuracy'] + h_fine.history['val_accuracy']
+def plot_and_save_performance(history_transfer, history_fine):
+    acc = history_transfer.history['accuracy'] + history_fine.history['accuracy']
+    val_acc = history_transfer.history['val_accuracy'] + history_fine.history['val_accuracy']
     
-    plt.figure(figsize=(10, 6))
+    plt.figure(figsize=(12, 6))
     plt.plot(acc, label='Eğitim Doğruluğu')
     plt.plot(val_acc, label='Doğrulama Doğruluğu')
-    plt.axvline(x=len(h_transfer.history['accuracy'])-1, color='r', linestyle='--', label='Fine-tuning Başlangıcı')
-    plt.title('Eğitim Süreci: Doğruluk Performansı')
+    plt.axvline(x=len(history_transfer.history['accuracy'])-1, color='r', linestyle='--', label='Fine-tuning Başlangıcı')
+    plt.title('Xception Model Performansı')
+    plt.xlabel('Epoch')
+    plt.ylabel('Doğruluk')
     plt.legend()
     plt.grid(True)
     plt.savefig('training_performance.png')
-    print("✅ Performans grafiği 'training_performance.png' olarak kaydedildi.")
+    print("✅ Grafik 'training_performance.png' olarak kaydedildi.")
 
-if __name__ == "__main__":
-    print("--- Model Eğitim Scripti Başlatıldı ---")
-    # Bu script notebook ortamındaki değişkenlere (train_ds, val_ds vb.) bağımlıdır.
-    # Notebook içinde çalıştırılması veya veri yükleme kodlarının buraya eklenmesi gerekir.
+if __name__ == '__main__':
+    print('Model eğitim ve fine-tuning süreci başlatılmaya hazır.')
