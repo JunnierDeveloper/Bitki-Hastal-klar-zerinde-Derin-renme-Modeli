@@ -1,0 +1,12 @@
+
+# EĞİTİLMİŞ MODEL DOSYALARI (GOOGLE DRIVE)
+
+GitHub dosya boyutu sınırları (100MB) nedeniyle eğitilmiş .keras modelleri burada saklanmamaktadır.
+
+Eğitilmiş modellere aşağıdaki Google Drive bağlantısı üzerinden erişebilirsiniz:
+
+[BURAYA DRIVE LİNKİNİZİ YAPIŞTIRIN]
+
+Modeller:
+- plant_model_stage1.keras
+- plant_model_finetuned.keras
