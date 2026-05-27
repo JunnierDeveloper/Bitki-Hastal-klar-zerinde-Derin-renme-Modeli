@@ -5,7 +5,7 @@ GitHub dosya boyutu sınırları (100MB) nedeniyle eğitilmiş .keras modelleri 
 
 Eğitilmiş modellere aşağıdaki Google Drive bağlantısı üzerinden erişebilirsiniz:
 
-[Model Linki](https://drive.google.com/your-shared-link-here)
+https://drive.google.com/drive/folders/1AoIRKp566gYCzvULiNnCL3D1YhZ99TQK?usp=sharing
 
 Modeller:
 - plant_model_stage1.keras
