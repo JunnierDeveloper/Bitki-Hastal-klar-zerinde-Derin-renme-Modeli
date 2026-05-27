@@ -1,0 +1,5 @@
+*.keras
+plant_data/
+sample_data/
+.config/
+drive/
