@@ -39,3 +39,22 @@ streamlit run "derin öğrenme test.py"
 - **Organik Mücadele Kılavuzu:** Tespit edilen her hastalık için kimyasal kalıntı bırakmayan doğal ve organik tedavi reçeteleri.
 - **Tehdit Seviyesi Göstergesi:** Hastalığın ciddiyetine göre renk kodlu risk uyarıları.
 - **İnteraktif Olasılık Grafiği:** Modelin tüm sınıflar için tahmini olasılık dağılımını gösteren şık grafik.
+
+---
+
+## 📸 Arayüz ve Performans Görselleri
+
+### 🖥️ Akıllı Teşhis Arayüzü (PlantGuard AI)
+Uygulamanın cam efektli (glassmorphism) koyu tema modern arayüzü:
+
+<p align="center">
+  <img src="Ekran görüntüsü 2026-05-28 201109.png" width="90%" alt="PlantGuard AI Arayüzü">
+</p>
+
+### 📈 Xception Model Eğitim Performansı
+Eğitim ve İnce Ayar (Fine-Tuning) aşamalarının doğruluk grafiği:
+
+<p align="center">
+  <img src="training_performance.png" width="90%" alt="Eğitim Başarı Grafiği">
+</p>
+
