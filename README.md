@@ -1,27 +1,41 @@
+# 🌿 Bitki Hastalıkları Teşhis ve Sınıflandırma Sistemi (PlantGuard AI)
 
-# 🌿 Bitki Hastalıkları Teşhis Sistemi (Derin Öğrenme)
+Bu proje, **Xception** derin öğrenme mimarisi kullanılarak domates, patates ve biber yapraklarındaki 15 farklı sağlık ve hastalık durumunu teşhis eden yüksek başarımlı bir yapay zeka sistemidir. Proje kapsamında Google Colab üzerinde eğitilen model, modern ve premium tasarımlı bir **Streamlit** web uygulaması üzerinden yerel bilgisayarda kolayca çalıştırılabilmektedir.
 
-## 📝 Proje Hakkında
-Bu proje, küresel tarımda verimliliği tehdit eden bitki hastalıklarını erken teşhis etmek amacıyla geliştirilmiştir. Modern derin öğrenme teknikleri kullanılarak, yaprak fotoğrafları üzerinden bitki türünü ve mevcut hastalığı yüksek doğrulukla analiz eder. 
+---
 
-Çalışma, gerçek dünya veri setleri (PlantVillage) üzerinde eğitilmiş olup, çiftçiler ve tarım uzmanları için bir karar destek sistemi olma potansiyeli taşımaktadır.
+## 🔗 Eğitilmiş Model Dosyaları (Google Drive)
 
-## 🚀 Teknik Başarılar ve Metodoloji
-- **Mimari:** Güçlü özellik çıkarma yeteneğine sahip **Xception** derin öğrenme mimarisi kullanılmıştır.
-- **Eğitim Stratejisi:** 
-    - **Transfer Learning:** ImageNet ağırlıkları kullanılarak model ön eğitilmiştir.
-    - **Fine-tuning:** Son katmanlar çözülerek veriye özel ince ayar yapılmış ve doğruluk oranı artırılmıştır.
-- **Performans:** Yapılan optimizasyonlar sonucunda doğrulama setinde **%99'un üzerinde** başarı elde edilmiştir.
-- **Veri Artırma (Augmentation):** Modelin genelleyebilirliğini artırmak için döndürme, yakınlaştırma ve yatay/dikey çevirme gibi teknikler uygulanmıştır.
+GitHub'ın 100 MB dosya boyutu sınırı nedeniyle, eğittiğimiz `.keras` model dosyaları bu depoda doğrudan barındırılmamaktadır. Eğitilmiş model dosyalarımıza aşağıdaki tıklanabilir bağlantı üzerinden kolayca erişebilirsiniz:
 
-## 📊 Eğitim Performansı
-Eğitim sürecine ait doğruluk ve kayıp grafikleri aşağıda yer almaktadır:
-![Eğitim Performansı](training_performance.png)
+👉 **[Google Drive Eğitilmiş Modelleri İndir](https://drive.google.com/drive/folders/1AoIRKp566gYCzvULiNnCL3D1YhZ99TQK?usp=sharing)**
 
-## 📁 Dosya Yapısı
-- `train_model.py`: Eğitim ve ince ayar süreçlerini otomatize eden ana script.
-- `MODEL_DRIVE_LINK.txt`: 100MB sınırını aşan modellerin (stage1 ve finetuned) Drive indirme bağlantısı.
-- `kaggle.json`: Veri setini doğrudan çekmek için gerekli API yapılandırması.
+### 📂 İndirilebilir Modeller:
+1. **`plant_model_stage1.keras`** (Transfer Learning Aşaması - 20 Epoch)
+2. **`plant_model_finetuned.keras`** (Fine-Tuning Aşaması - 35 Epoch)
 
-## 🛠 Kurulum ve Çalıştırma
-Projeyi yerelinizde çalıştırmak için gerekli kütüphaneleri kurup `python train_model.py` komutunu verebilirsiniz. 
+> [!IMPORTANT]
+> Uygulamanın çalışabilmesi için indirdiğiniz `.keras` dosyasını `derin öğrenme test.py` ile aynı klasöre kopyalamanız gerekmektedir.
+
+---
+
+## 🚀 Kurulum ve Çalıştırma
+
+### 1. Gerekli Kütüphanelerin Kurulumu:
+```bash
+pip install tensorflow streamlit pillow numpy matplotlib
+```
+
+### 2. Uygulamayı Başlatma:
+```bash
+streamlit run "derin öğrenme test.py"
+```
+
+---
+
+## 🎨 Uygulama Özellikleri
+- **Akıllı Teşhis Portalı:** Yaprak fotoğraflarını sürükle-bırak yöntemiyle yükleyip anında sonuç alma.
+- **Neon Tarama Efekti:** Görsel analiz edilirken yaprak üzerinde kayan neon analiz çizgisi animasyonu.
+- **Organik Mücadele Kılavuzu:** Tespit edilen her hastalık için kimyasal kalıntı bırakmayan doğal ve organik tedavi reçeteleri.
+- **Tehdit Seviyesi Göstergesi:** Hastalığın ciddiyetine göre renk kodlu risk uyarıları.
+- **İnteraktif Olasılık Grafiği:** Modelin tüm sınıflar için tahmini olasılık dağılımını gösteren şık grafik.
