@@ -1,0 +1,9 @@
+# PlantGuard AI - Gerekli Kütüphaneler Listesi (Dependencies)
+# Kurulum için terminalde şu komutu çalıştırabilirsiniz:
+# pip install -r requirements.txt
+
+tensorflow>=2.16.0
+streamlit>=1.30.0
+pillow>=10.0.0
+numpy>=1.24.0
+matplotlib>=3.7.0
