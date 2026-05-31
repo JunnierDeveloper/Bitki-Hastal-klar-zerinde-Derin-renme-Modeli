@@ -58,3 +58,15 @@ Eğitim ve İnce Ayar (Fine-Tuning) aşamalarının doğruluk grafiği:
   <img src="training_performance.png" width="90%" alt="Eğitim Başarı Grafiği">
 </p>
 
+#### 📊 Model Başarı ve Doğruluk Değerleri (Epoch 35 - Final)
+
+| Metrik Türü | Grafik Rengi | Başarı Oranı (%) | Ondalık Değer |
+| :--- | :---: | :---: | :---: |
+| **Doğrulama Doğruluğu (Val Accuracy)** | **Kırmızı Çizgi** | **~%99.1** | **~0.991** |
+| **Eğitim Doğruluğu (Train Accuracy)** | **Mavi Çizgi** | **~%98.8** | **~0.988** |
+
+#### 🔍 Eğitim Süreci Değerlendirmesi:
+* **Transfer Öğrenme Aşaması (1 - 20. Epoch):** Xception taban modelinin ağırlıkları kilitli tutularak sadece çıkış katmanı eğitilmiş, doğruluk değeri **~%85** seviyesinde dengelenmiştir.
+* **İnce Ayar (Fine-Tuning) Aşaması (20 - 35. Epoch):** 20. epoch'ta ince ayar sürecinin başlamasıyla (yeşil kesikli çizgi) tüm katmanlar aktif hale getirilmiş ve çok hassas bir öğrenme oranıyla eğitilmiştir. Model, yapraklar üzerindeki leke ve damar yapıları gibi mikro seviyedeki detayları öğrenerek nihai olarak **%99.1 doğrulama başarısına** ulaşmıştır.
+* **Hata Kaybı (Loss) Analizi:** Eğitim sonunda kayıp değerleri minimum seviyeye (Eğitim Kaybı: ~0.04, Doğrulama Kaybı: ~0.03) gerileyerek modelin aşırı öğrenme (overfitting) göstermeden son derece kararlı çalıştığını kanıtlamıştır.
+
